@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MultiDeploy App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Aplicación Multiplataforma</h1>
+    <p>Validación de despliegue en distintos entornos</p>
+    <button onclick="checkStatus()">Verificar entorno</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    async function checkStatus() {
+      const response = await fetch("/api/status");
+      const data = await response.json();
+      document.getElementById("result").innerHTML =
+        `<p><strong>Mensaje:</strong> ${data.message}</p>
+         <p><strong>Entorno:</strong> ${data.environment}</p>
+         <p><strong>Plataforma:</strong> ${data.platform}</p>`;
+    }
+  </script>
+
+</body>
+</html>
