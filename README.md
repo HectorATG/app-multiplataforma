@@ -56,7 +56,7 @@ APP-MULTIPLATAFORMA
 
 1. Clonar el repositorio:
 
-git clone https://github.com/tuusuario/turepositorio.git
+git clone https://github.com/HectorATG/app-multiplataforma
 
 2. Entrar al proyecto:
 
